@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-border: var(--border); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-ring: var(--ring); --radius-sm: calc(var(--radius) * .6); --radius-md: calc(var(--radius) * .8); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) * 1.4); --font-sans: 'Geist', 'Arial', sans-serif; --font-mono: 'Geist Mono', 'Courier New', monospace;
+}
+:root { color-scheme: dark; --background: oklch(.115 .02 255); --foreground: oklch(.93 .02 220); --card: oklch(.145 .025 255); --card-foreground: oklch(.93 .02 220); --primary: oklch(.88 .19 115); --primary-foreground: oklch(.12 .02 110); --secondary: oklch(.19 .03 255); --secondary-foreground: oklch(.9 .02 220); --muted: oklch(.2 .025 255); --muted-foreground: oklch(.58 .03 235); --accent: oklch(.78 .15 195); --accent-foreground: oklch(.12 .02 220); --border: oklch(.28 .035 250); --ring: oklch(.78 .15 195); --radius: .35rem; }
+* { @apply border-border outline-ring/50; }
+html { background: var(--background); }
+body { @apply bg-background text-foreground; font-feature-settings: 'ss01', 'cv02'; }
+button, a, textarea { -webkit-tap-highlight-color: transparent; }
+::selection { background: oklch(.88 .19 115); color: oklch(.12 .02 110); }
